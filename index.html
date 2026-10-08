@@ -32,7 +32,8 @@
           "streetAddress": "1330 Arrow Hwy",
           "addressLocality": "La Verne",
           "addressRegion": "CA",
-          "postalCode": "91750"
+          "postalCode": "91750",
+          "addressCountry": "US"
         },
         "url": "https://www.madddoggdigital.com"
       }
@@ -109,12 +110,12 @@
             <img src="images/madd-dogg-digital-logo.png" alt="">
             <span>Madd Dogg Digital</span>
           </a>
-          <button id="menu" aria-label="Menu">☰</button>
+          <button id="menu" aria-label="Menu" aria-controls="links" aria-expanded="false">☰</button>
           <ul id="links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="custom-digital-wallcovering.html">Wallcovering</a></li>
+            <li><a href="printed-acoustical-panels.html">Acoustical Panels</a></li>
+            <li><a href="materials-specs.html">Materials &amp; Specs</a></li>
             <li><a href="#process">Process</a></li>
-            <li><a href="#technology">Technology</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a class="btn" href="#contact">Request a Quote</a></li>
           </ul>
@@ -167,15 +168,15 @@
           <div class="grid3">
             <div class="card rv">
               <h3>Custom Digital Wallcoverings</h3>
-              <p>Digitally printed wallcovering: bespoke wallpapers and murals that match your design aesthetic. From intricate patterns to large-scale graphics, in high resolution.</p>
+              <p>Digitally printed wallcovering: bespoke wallpapers and murals that match your design aesthetic. From intricate patterns to large-scale graphics, in high resolution. <a href="custom-digital-wallcovering.html">Learn more</a>.</p>
             </div>
             <div class="card rv">
               <h3>Printed Acoustical Panels &amp; Sound Boards</h3>
-              <p>Custom-printed acoustic panels and acoustical sound boards that improve both the look and the sound of offices, studios and public spaces.</p>
+              <p>Custom-printed acoustic panels and acoustical sound boards that improve both the look and the sound of offices, studios and public spaces. <a href="printed-acoustical-panels.html">Learn more</a>.</p>
             </div>
             <div class="card rv">
               <h3>Custom Printed Building Materials</h3>
-              <p>Digital printing opens up customization on a variety of building materials, for interior and exterior applications.</p>
+              <p>Digital printing opens up customization on a variety of building materials, for interior and exterior applications. <a href="materials-specs.html">Learn more</a>.</p>
             </div>
           </div>
         </div>
@@ -260,7 +261,6 @@
         <div class="wrap" style="max-width:800px">
           <div class="eyebrow">FAQ</div>
           <h2>Digital wallcovering and printing questions.</h2>
-          <!-- TODO: Confirm minimum order, fire rating, and lead time with the client. -->
           <details>
             <summary>What is digitally printed wallcovering?</summary>
             <p>Digitally printed wallcovering is custom wallcovering produced directly from digital artwork. It lets designers create bespoke wallpapers, murals and large-scale graphics in high resolution, from intricate patterns to full-wall images.</p>
@@ -306,16 +306,21 @@
             </p>
           </div>
           <form id="qf">
-            <input name="name" placeholder="Your name" required>
-            <input name="email" type="email" placeholder="Email" required>
-            <input name="company" placeholder="Company / firm">
-            <select name="type">
+            <label class="visually-hidden" for="qf-name">Your name</label>
+            <input id="qf-name" name="name" placeholder="Your name" required>
+            <label class="visually-hidden" for="qf-email">Email</label>
+            <input id="qf-email" name="email" type="email" placeholder="Email" required>
+            <label class="visually-hidden" for="qf-company">Company or firm</label>
+            <input id="qf-company" name="company" placeholder="Company / firm">
+            <label class="visually-hidden" for="qf-type">Project type</label>
+            <select id="qf-type" name="type">
               <option>Custom Wallcoverings</option>
               <option>Acoustical Solutions</option>
               <option>Custom Building Materials</option>
               <option>Something else</option>
             </select>
-            <textarea name="msg" rows="4" placeholder="Project details, quantities, timeline" required></textarea>
+            <label class="visually-hidden" for="qf-message">Project details, quantities, and timeline</label>
+            <textarea id="qf-message" name="msg" rows="4" placeholder="Project details, quantities, timeline" required></textarea>
             <button class="btn" type="submit">Send Quote Request</button>
           </form>
         </div>
