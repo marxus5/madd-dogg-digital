@@ -227,6 +227,10 @@ nav a.logo:hover {
   background: #222 url("../images/yellow-flowers-custom-digital-wallcovering.jpg") center/cover;
 }
 
+.page-hero {
+  padding: 144px 0 100px;
+}
+
 .hero::before {
   position: absolute;
   inset: 0;
@@ -454,6 +458,16 @@ textarea {
   font: inherit;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -504,6 +518,10 @@ footer .logo {
 @media (max-width: 860px) {
   section {
     padding: 60px 0;
+  }
+
+  .page-hero {
+    padding: 112px 0 64px;
   }
 
   .grid3,

@@ -26,12 +26,14 @@ const links = document.getElementById('links');
 const menuButton = document.getElementById('menu');
 
 menuButton.addEventListener('click', () => {
-	links.classList.toggle('open');
+	const isOpen = links.classList.toggle('open');
+	menuButton.setAttribute('aria-expanded', isOpen);
 });
 
 links.addEventListener('click', (event) => {
 	if (event.target.tagName === 'A') {
 		links.classList.remove('open');
+		menuButton.setAttribute('aria-expanded', 'false');
 	}
 });
 
